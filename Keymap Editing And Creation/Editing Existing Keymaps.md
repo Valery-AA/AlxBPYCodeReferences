@@ -46,9 +46,9 @@ def AlxEditKeymaps(KeyconfigSource="Blender", ConfigSpaceName="", ItemidName="",
 To access an existing keybind you need:
 - The source of where the keybinds are stored i.e. Blender Default, Addon or User created
 - The name of the space in the keymapconfigs not the keymap space_type, <br> this can be viewed by simply opening the keymap preferences, it will be the earliest relative parent dropdown which will be the name used in the keymapconfigs
-- The bl_idname or equivalent used in the preferences for example "object.mode_set" or the bl_idname in case is an addon keymap\
+- The bl_idname or equivalent used in the preferences for example "object.mode_set" or the bl_idname in case is an addon keymap
 
-##### Keypoints
+#### Keypoints
 - The Editing has to be done inside a try/except condition
 ```
 try:
@@ -69,8 +69,9 @@ This is not recommended but i find it to be the best solution, the methods that 
 - The Keymap will retain any of it's previous options if they are not altered
   meaning if the editing is not done with the "stock" function above the changes can be done singularly without needing to re-input rest of the values that the keymap had before
 <br>
-- Regardless of method used always remember to check for __keymap.properties is None__ as there are some keymaps that will fail if searched due to variants that can posses a property
-example:
+
+- Regardless of method used always remember to check for __keymap.properties is None__ as there are some keymaps that will fail if searched due to variants that can posses a property example:
+
 ```
-if (KeymapItem is not None) and (KeymapItem.idname == ItemidName) and (KeymapItem.properties is None)
+    if (KeymapItem is not None) and (KeymapItem.idname == ItemidName) and (KeymapItem.properties is None)
 ```
