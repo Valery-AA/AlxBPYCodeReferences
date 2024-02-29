@@ -2,7 +2,7 @@
 ### Reload a .py file
 
 This allows a single file in the folder to be reloaded along with the main __init__.py file
-the file does not have to be a module as python files will be interpreted as modules, this should be used for each file and not in bulk under the same if statement _(check [section](the-wrong-way-of-reloading))_
+the file does not have to be a module as python files will be interpreted as modules, this should be used for each file and not in bulk under the same if statement _(check [section](https://github.com/Valery-AA/AlxBPYCodeReferences/blob/main/Addon%20Register%20And%20Reload/Reloading%20Multi-File%20Addons.md#the-wrong-way-of-reloading))_
 ```py
 
 if ("PythonFileName" not in locals()):
